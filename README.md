@@ -37,6 +37,8 @@ The initial stats show the overall performance before running the A/B test:
 
 From the visualizations, I gathered the following insights:
 
+![](Image/pretest_visitor_counts_perday.PNG)
+
 _**Image-2: Visitors per Day**_
 
 - **Visitors per day:** The site receives approximately 10,000 visitors each day.

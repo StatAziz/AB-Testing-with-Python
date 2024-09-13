@@ -1,3 +1,4 @@
+![](Image/cover.gif)
 # AB-Testing-with-Python
 
 ## Business Problem

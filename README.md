@@ -44,6 +44,7 @@ _**Image-2: Visitors per Day**_
 - **Visitors per day:** The site receives approximately 10,000 visitors each day.
 
 _**Image-3: Sign-up Rate per Day**_
+![](Image/pretest_signup_rate.PNG)
 
 - **Sign-up rate per day:** The daily sign-up rate hovers around 10%, ranging between 9.5% and 10.5%.
 
@@ -100,7 +101,7 @@ The next step is determining how long to run the experiment to achieve the requi
 The duration depends on the percentage of unique visitors allocated to the experiment and the average number of visitors to the pre-launch page.
 We estimate the duration required based on different traffic allocation scenarios:
 
-
+![](Image/Experiment_Duration_Given_Signup_Rate.PNG)
 _**Image-6: Duration Estimates**_
 
 - 10% traffic allocation: 30 days
@@ -112,6 +113,7 @@ _**Image-6: Duration Estimates**_
 For a more balanced approach between risk and time, we plan to allocate around 20-30% of traffic, which leads to a test duration of 10-15 days.
 Additionally, I calculated the number of users required per day for different experiment durations:
 
+![](Image/Experiment_Duration_Given_Signup_Count.PNG)
 This gives the following estimates:
 •	21-day experiment: 1,429 users required per day
 •	14-day experiment: 2,143 users required per day
@@ -165,6 +167,7 @@ Once the experiment is live, visitors are randomly assigned to either the contro
 During this phase, we monitor and collect data on the number of visitors and email sign-ups for both groups.
 After gathering sufficient data, I calculated the sign-up rates for both the control and treatment groups:
 
+![](Image/AB_Test_signup_rate.PNG)
 - **Control Sign-Up Rate (Red Button):** 9.56%
 - **Treatment Sign-Up Rate (Green Button):** 10.78%
 To gain further insights, I calculated the daily sign-up rates for each group:

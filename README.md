@@ -134,6 +134,7 @@ Before running the actual A/B test, we performed an AA test to ensure that our e
 The sign-up rates for both groups during the AA test were as follows:
 
 Before the A/B test, we ran an AA test:
+![](Image/AA_Test.PNG)
 - **Control Sign-Up Rate (Red Button):** 10.1%
 - **Treatment Sign-Up Rate (Green Button):** 9.88%
 

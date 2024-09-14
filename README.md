@@ -93,6 +93,7 @@ _**Image-4: Sample Size Calculation**_
 Each group will need 15,000 visitors, for a total sample size of 30,000, ensuring the test has enough sensitivity.
 
 ### Ensuring Statistical Power
+![](Image/power_analysis.PNG)
 To achieve 80% statistical power (the probability of detecting a real difference when it exists), each group in the experiment will need 15,000 visitors, bringing the total sample size to 30,000. This ensures the test has enough sensitivity to detect a meaningful difference between the two button designs.
 
 

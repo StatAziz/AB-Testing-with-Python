@@ -40,15 +40,12 @@ The initial stats and the overall performance from the pre-test data before runn
 This understanding of the baseline performance and dataset helps me define a clear objective: improving the current 10% sign-up rate through the A/B test. 
 By testing the red vs. green buttons, I aim to see if we can push this number higher.
 
----
 
-## Step 1: Understand the Business Problem
+## Business Objective
 
-Before conducting any A/B test, it's crucial to fully understand the business objective. In this case, Urban Wear's objective is to increase the number of email sign-ups before the launch. By testing different submit button designs (red vs. green), we aim to identify which version increases user engagement, translating into more email submissions.
+Before conducting any A/B test, it's crucial to fully understand the business objective. In this case, CityFit's objective is to increase the number of email sign-ups before the launch. By testing different submit button designs (red vs. green), we aim to identify which version increases user engagement, translating into more email submissions.
 
----
-
-## Step 2: State the Hypothesis
+## Test Hypothesis
 
 Next, we state the hypothesis for the experiment:
 
@@ -60,98 +57,75 @@ We also set parameters for the experiment:
 - **Statistical Power:** The probability of detecting a real difference when it exists, usually 80%.
 - **Minimum Detectable Effect (MDE):** The smallest change in sign-up rates we aim to detect. We aim for a 10% MDE in this experiment.
 
----
-
-## Step 3: Design the Experiment
+## Experiment Design
 
 Designing the experiment is critical to ensuring we collect sufficient data for accurate conclusions. In this case, we are testing the red submit 
-button (control) against the green submit button (treatment) to measure the impact on email sign-up rates. The experiment design includes the following steps:
+button (control) against the green submit button (treatment) to measure the impact on email sign-up rates. The experiment design includes the following factors:
 
-### Randomization Unit
+- ### Randomization
 
 Visitors are randomly assigned to either the control or treatment group, which ensures there is no bias or systematic difference between the two groups. 
 This randomness is key to isolating the effect of the button color on sign-ups.
 
-### Sample Size Calculation
+- ### Sample Size 
 
 To calculate the necessary sample size, I used Cohen’s D method to estimate the effect size. Based on the pretest data, 
-I aimed to detect a 10% lift in sign-ups, improving the current 10% rate. Using the following code, I calculated the effect size and determined the required sample size:
-
-_**Image-4: Sample Size Calculation**_
-
+I aimed to detect a 10% lift in sign-ups, improving the current 10% rate. Based on the calculated effect size and required sample size:
 Each group will need 15,000 visitors, for a total sample size of 30,000, ensuring the test has enough sensitivity.
 
-### Ensuring Statistical Power
+- ### Statistical Power
 ![](Image/power_analysis.PNG)
 To achieve 80% statistical power (the probability of detecting a real difference when it exists), each group in the experiment will need 15,000 visitors, bringing the total sample size to 30,000. This ensures the test has enough sensitivity to detect a meaningful difference between the two button designs.
 
 
-### Experiment Duration
+- ### Experiment Duration
 
 The next step is determining how long to run the experiment to achieve the required sample size of 30,000 visitors (15,000 per group). 
 The duration depends on the percentage of unique visitors allocated to the experiment and the average number of visitors to the pre-launch page.
 We estimate the duration required based on different traffic allocation scenarios:
 
 ![](Image/Experiment_Duration_Given_Signup_Rate.PNG)
-_**Image-6: Duration Estimates**_
 
-- 10% traffic allocation: 30 days
-- 20% traffic allocation: 15 days
-- 30% traffic allocation: 10 days
-- 50% traffic allocation: 6 days
-- 100% traffic allocation: 3 days
 
 For a more balanced approach between risk and time, we plan to allocate around 20-30% of traffic, which leads to a test duration of 10-15 days.
-Additionally, I calculated the number of users required per day for different experiment durations:
+Additionally, I calculated the number of users required per day for different experiment durations.
 
 ![](Image/Experiment_Duration_Given_Visitors_Count.PNG)
-This gives the following estimates:
-•	21-day experiment: 1,429 users required per day
-•	14-day experiment: 2,143 users required per day
-•	7-day experiment: 4,286 users required per day
+
 
 Given that a 14-day experiment balances risk and practicality (requiring around 2,143 users per day) while accounting for weekend effects, 
-I will run the experiment for 7-14 days. This duration allows enough time to gather the necessary data without risking too long a delay in decision-making.
+I will run the experiment for around 14 days. This duration allows enough time to gather the necessary data without risking too long a delay in decision-making.
 By carefully choosing the traffic allocation and experiment duration, I ensure that the test will provide reliable results within a reasonable timeframe.
 
 
----
-
-## Step 4: Assess Validity Threats
+## Validity Threats
 In any A/B experiment, it is crucial to ensure that the results are reliable and not affected by errors or biases. 
-To address potential validity threats, we conducted an AA Test and checked for Sample Ratio Mismatch (SRM).
-### AA Test: Ensuring Instrumentation Validity
-Before running the actual A/B test, we performed an AA test to ensure that our experiment setup did not have any issues. The AA test assigns users to two identical groups, allowing us to verify that the assignment mechanism and infrastructure are working correctly.
+To address potential validity threats, we conducted an AA Test and also checked for Sample Ratio Mismatch (SRM).
+### AA Test
+The reason to perform an AA test is to ensure that our experiment setup did not have any issues. 
+The AA test assigns users to two identical groups, allowing us to verify that the assignment mechanism and infrastructure are working correctly.
 The sign-up rates for both groups during the AA test were as follows:
-
-Before the A/B test, we ran an AA test:
+- **Control (Red Button):** 10.1%
+- **Treatment (Red Button):** 9.88%
 ![](Image/AA_Test_new.PNG)
-- **Control Sign-Up Rate (Red Button):** 10.1%
-- **Treatment Sign-Up Rate (Green Button):** 9.88%
 
-We ran a Chi-Square test to check for statistical significance between the two groups:
-The results were:
-
-The **Chi-Square test** resulted in:
-- **P-Value:** 0.448 (not significant)
-
+We ran a Chi-Square test to check for statistical significance between the two groups. The Chi-Square value 0.577 with P-value 0.448.
 Since the P-value (0.448) was greater than our alpha level of 0.05, we failed to reject the null hypothesis (Ho). 
 This means that there was no statistically significant difference between the two groups, and we can confidently 
 proceed with the A/B test without worrying about instrumentation errors.
 
-### Sample Ratio Mismatch (SRM): Ensuring Random Assignment
-Sample Ratio Mismatch (SRM) occurs when the expected ratio of samples between the control and treatment groups is 
+### Sample Ratio Mismatch (SRM)
+The reason to perform a SRM is ensuring random assignment of samples. Sample Ratio Mismatch (SRM) occurs when the expected ratio of samples between the control and treatment groups is 
 different from what is observed in the experiment. Ideally, in an A/B test, the ratio should be 1:1, meaning that both groups should have an equal number of users.
 
-We conducted a Chi-Square Goodness of Fit Test to check for SRM:
-he results of the SRM test were:
-
-To check for random assignment issues, we ran a **Chi-Square Goodness of Fit Test** for SRM:
-- **P-Value:** 0.256 (not significant)
-Since the P-value (0.256) was greater than 0.05, we failed to reject the null hypothesis (Ho). This indicates that there was no sample ratio mismatch, and both groups received a nearly equal number of visitors as expected.
+Pre-test sample allocations:
+- **Control**:14,942
+- **Treatment**:15,139
+  
+We conducted a **Chi-Square Goodness of Fit Test** to identify if the sample raito is significantly different than expected ratio of 1:1.
+The result shows Chi-Square 1.29 with P-value 0.256. Since the P-value (0.256) was greater than 0.05, 
+we failed to reject the null hypothesis (Ho). This indicates that there was no sample ratio mismatch, and both groups received a nearly equal number of visitors as expected.
 By passing both the AA test and SRM test, we can confidently proceed to analyze the A/B test results without concerns about underlying validity threats.
-
----
 
 ## Step 5: Run the Experiment
 

@@ -127,79 +127,59 @@ The result shows Chi-Square 1.29 with P-value 0.256. Since the P-value (0.256) w
 we failed to reject the null hypothesis (Ho). This indicates that there was no sample ratio mismatch, and both groups received a nearly equal number of visitors as expected.
 By passing both the AA test and SRM test, we can confidently proceed to analyze the A/B test results without concerns about underlying validity threats.
 
-## Step 5: Run the Experiment
+## Experiment Run
 
 Once the experiment is live, visitors are randomly assigned to either the control group (red button) or the treatment group (green button). 
 During this phase, we monitor and collect data on the number of visitors and email sign-ups for both groups.
 After gathering sufficient data, I calculated the sign-up rates for both the control and treatment groups:
 
 ![](Image/AB_Test_new.PNG)
-- **Control Sign-Up Rate (Red Button):** 9.56%
-- **Treatment Sign-Up Rate (Green Button):** 10.78%
-To gain further insights, I calculated the daily sign-up rates for each group:
-The average daily sign-up rates over the course of the experiment were:
-•	Control Group (Red Button): 9.55%
-•	Treatment Group (Green Button): 10.78%
+- **Control (Red Button):** 9.56%
+- **Treatment (Green Button):** 10.78%
+  
 These results indicate that the treatment (green button) consistently outperformed the control (red button), leading to a higher email sign-up rate during the experiment.
 
 
----
-
-## Step 6: Conduct Statistical Inference
+## Statistical Inference
 Now that the A/B test has been conducted, it's time to perform statistical inference. This step includes conducting both a Chi-Square Test and 
 a T-Test for proportions, followed by calculating the Confidence Interval (CI) for the sign-up rate differences.
-### Chi-Square Test
+- ### Chi-Square Test
 
 The Chi-Square test evaluates whether there is a statistically significant difference in the sign-up rates between the 
 control group (red button) and the treatment group (green button).
+The results of the Chi-Square Test are:
 
-The observed sign-up rates were:
-•	Control Sign-Up Rate: 9.6%
-•	Treatment Sign-Up Rate: 10.8%
-
-The **Chi-Square test** confirmed statistical significance:
 - **Chi-Square Statistic:** 12.312
 - **P-Value:** 0.000 (significant)
-  •	Significance Level (Alpha): 0.05
+  
 Since the P-value (0.000) is less than 0.05, we reject the null hypothesis (Ho), concluding that there is a statistically significant difference in sign-up rates between the red and green buttons.
 
 
-### T-Test for Proportions
+- ### T-Test for Proportions
 Next, we conducted a T-Test for proportions to further validate the results. The T-Test compares the sign-up rates between the control and treatment groups.
 The results of the T-Test are:
 
-
-The **T-Test** also confirmed the difference between the two groups:
 - **T-Statistic:** 3.509
 - **P-Value:** 0.000 (significant)
+  
 As with the Chi-Square test, the P-value (0.000) is below the significance level, so we reject the null hypothesis.
 This further confirms that the difference in sign-up rates between the control and treatment groups is statistically significant.
 
-### Confidence Interval (CI)
+- ### Confidence Interval (CI)
 
 To quantify the difference between the sign-up rates, we computed the confidence intervals (CIs) for the absolute and relative differences between the two groups.
-We calculated the **Confidence Interval** for the difference:
+
 - **Absolute Difference CI:** (0.005, 0.019)
 - **Relative Lift CI:** (5.7%, 19.9%)
+  
 This means that we are 95% confident that the true absolute difference in sign-up rates is between 0.5% and 1.9%, and the relative lift is between 5.7% and 19.9%.
 Based on both the Chi-Square and T-Test, we can confidently reject the null hypothesis. There is a statistically significant difference in sign-up rates between the control (red button) and treatment (green button). The treatment group (green button) achieved a 12.8% lift in sign-ups, and the confidence interval for this lift is between 5.7% and 19.9%.
 
----
 
-## Step 7: Decide Whether to Launch
+## Decision
 
-The results over the two-week experiment (02/01/2022 - 02/14/2022) were:
-- **Control (Red Button) Sign-up Rate:** 9.6%
-- **Treatment (Green Button) Sign-up Rate:** 12.8%
-- **Lift:** 3.2% improvement
+Given both practical and statistical significance, I recommend launching the new green submit button to increase email sign-ups for CityFit. This change will likely enhance user engagement on the pre-launch page and contribute to a larger email list for the upcoming eCommerce launch.
 
-Given both practical and statistical significance, I recommend launching the new green submit button to increase email sign-ups for Urban Wear.
-After running the two-week experiment (02/01/2022 - 02/14/2022), we observed the following results:
-•	Control (Red Button) Sign-up Rate: 9.6%
-•	Treatment (Green Button) Sign-up Rate: 12.8%
-•	Lift: 12.8% - 9.6% = 3.2% improvement
-The results are statistically significant, with a 95% confidence interval ranging from 5.7% to 19.9%. Given both practical and statistical significance, we recommend launching the new green submit button to increase email sign-ups for Urban Wear.
 
----
 
-This structured approach covers the end-to-end process of A/B testing, from defining the business problem to making a data-driven decision for implementation.
+

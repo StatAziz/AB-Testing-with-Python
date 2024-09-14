@@ -1,5 +1,5 @@
 ![](Image/cover.gif)
-# AB-Testing-with-Python
+# Email Sign-Up Optimization: A/B Testing with Python
 
 ## Business Problem
 

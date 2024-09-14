@@ -114,7 +114,7 @@ _**Image-6: Duration Estimates**_
 For a more balanced approach between risk and time, we plan to allocate around 20-30% of traffic, which leads to a test duration of 10-15 days.
 Additionally, I calculated the number of users required per day for different experiment durations:
 
-![](Image/Experiment_Duration_Given_Signup_Count.PNG)
+![](Image/Experiment_Duration_Given_Visitors_Count.PNG)
 This gives the following estimates:
 •	21-day experiment: 1,429 users required per day
 •	14-day experiment: 2,143 users required per day

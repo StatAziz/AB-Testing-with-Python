@@ -69,9 +69,10 @@ This randomness is key to isolating the effect of the button color on sign-ups.
 
 - ### Sample Size 
 
-To calculate the necessary sample size, I used Cohen’s D method to estimate the effect size. Based on the pretest data, 
-I aimed to detect a 10% lift in sign-ups, improving the current 10% rate. Based on the calculated effect size and required sample size:
-Each group will need 15,000 visitors, for a total sample size of 30,000, ensuring the test has enough sensitivity.
+To calculate the necessary sample size, I used Cohen’s D method to estimate the effect size. Based on the calculation,
+to detect an effect of 10.0% lift from the pretest sign-up at 10%, the sample size per group required is 15000, 
+for a total sample size of 30,000, ensuring the test has enough sensitivity.
+
 
 - ### Statistical Power
 ![](Image/power_analysis.PNG)

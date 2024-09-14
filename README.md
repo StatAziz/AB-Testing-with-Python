@@ -101,7 +101,7 @@ By carefully choosing the traffic allocation and experiment duration, I ensure t
 ## Validity Threats
 In any A/B experiment, it is crucial to ensure that the results are reliable and not affected by errors or biases. 
 To address potential validity threats, we conducted an AA Test and also checked for Sample Ratio Mismatch (SRM).
-### AA Test
+- ### AA Test
 The reason to perform an AA test is to ensure that our experiment setup did not have any issues. 
 The AA test assigns users to two identical groups, allowing us to verify that the assignment mechanism and infrastructure are working correctly.
 The sign-up rates for both groups during the AA test were as follows:
@@ -114,7 +114,7 @@ Since the P-value (0.448) was greater than our alpha level of 0.05, we failed to
 This means that there was no statistically significant difference between the two groups, and we can confidently 
 proceed with the A/B test without worrying about instrumentation errors.
 
-### Sample Ratio Mismatch (SRM)
+- ### Sample Ratio Mismatch (SRM)
 The reason to perform a SRM is ensuring random assignment of samples. Sample Ratio Mismatch (SRM) occurs when the expected ratio of samples between the control and treatment groups is 
 different from what is observed in the experiment. Ideally, in an A/B test, the ratio should be 1:1, meaning that both groups should have an equal number of users.
 

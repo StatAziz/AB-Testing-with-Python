@@ -3,20 +3,17 @@
 
 ## Business Problem
 
-Urban Wear, a clothing brand, is preparing to launch an eCommerce store. Currently, the pre-launch page is live, and its primary goal is to collect as many emails from visitors as possible for the upcoming launch. As a Product Data Scientist at Urban Wear, my task is to design, run, and analyze an A/B experiment that tests two versions of the email sign-up button on the pre-launch page.
+CityFit, a clothing brand, is preparing to launch an eCommerce store. Currently, the pre-launch page is live, and its primary goal is to collect as many emails from visitors as possible for the upcoming launch. As a Product Data Scientist at Urban Wear, my task is to design, run, and analyze an A/B experiment that tests two versions of the email sign-up button on the pre-launch page.
 
-- **Control:** The current red submit button.
-- **Treatment:** A new green submit button.
+- **Control:** The current red submit button. 🔴
+- **Treatment:** A new green submit button. 🟢
+
 
 The goal of this experiment is to help the product team at Urban Wear determine which version leads to higher email sign-up rates.
 
 ## Pre-Test Data Overview
 
-To better understand the current performance, I first reviewed the pre-test data, displaying the first five rows of the dataset:
-
-_**Image-1: Data Overview**_
-
-This dataset contains essential information about visitor interactions, with fields like:
+To better understand the current performance, I first reviewed the pre-test data. This dataset contains the following variables:
 - `visitor_id` (unique identifier of each visitor)
 - `date` (visiting date)
 - `email` (email address, `NaN` for not provided)
@@ -24,32 +21,24 @@ This dataset contains essential information about visitor interactions, with fie
 - `group` (0 = control, 1 = treatment)
 - `submitted` (0 = No, 1 = Yes)
 
-- **Number of rows in the table:** 309,903
-- **Date range:** 2021-12-01 to 2021-12-31
-
 ## Pre-Test Performance
 
-The initial stats show the overall performance before running the A/B test:
+The initial stats and the overall performance from the pre-test data before running the A/B test:
+- **Number of rows in the table:** 309,903
+- **Date range:** 2021-12-01 to 2021-12-31
 - **Total visitors:** 309,903
 - **Sign-ups:** 31,295
 - **Sign-up rate:** 10%
 
-### Visitor and Sign-Up Rate Insights
-
-From the visualizations, I gathered the following insights:
-
+### Pre-Test Metrics Insights
+- **Visitors per day:** The site receives approximately 10,000 visitors each day.
 ![](Image/pretest_visitor_counts_perday.PNG)
 
-_**Image-2: Visitors per Day**_
-
-- **Visitors per day:** The site receives approximately 10,000 visitors each day.
-
-_**Image-3: Sign-up Rate per Day**_
+- **Sign-up rate per day:** The daily sign-up rate hovers around 10%, ranging between 9.4% and 10.8%.
 ![](Image/pretest_signup_rate.PNG)
 
-- **Sign-up rate per day:** The daily sign-up rate hovers around 10%, ranging between 9.5% and 10.5%.
-
-This understanding of the baseline performance and dataset helps me define a clear objective: improving the current 10% sign-up rate through the A/B test. By testing the red vs. green buttons, I aim to see if we can push this number higher.
+This understanding of the baseline performance and dataset helps me define a clear objective: improving the current 10% sign-up rate through the A/B test. 
+By testing the red vs. green buttons, I aim to see if we can push this number higher.
 
 ---
 

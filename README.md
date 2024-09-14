@@ -180,6 +180,9 @@ Based on both the Chi-Square and T-Test, we can confidently reject the null hypo
 
 Given both practical and statistical significance, I recommend launching the new green submit button to increase email sign-ups for CityFit. This change will likely enhance user engagement on the pre-launch page and contribute to a larger email list for the upcoming eCommerce launch.
 
+#### Acknowledgement
+I completed this project as part of the "Ultimate A/B Testing Course with Python Coding," taught by Dan Lee, a former data scientist at Google. I am deeply grateful for his guidance.
+
 
 
 

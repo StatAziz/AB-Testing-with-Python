@@ -125,7 +125,7 @@ Before running the actual A/B test, we performed an AA test to ensure that our e
 The sign-up rates for both groups during the AA test were as follows:
 
 Before the A/B test, we ran an AA test:
-![](Image/AA_Test.PNG)
+![](Image/AA_Test_new.PNG)
 - **Control Sign-Up Rate (Red Button):** 10.1%
 - **Treatment Sign-Up Rate (Green Button):** 9.88%
 
@@ -159,7 +159,7 @@ Once the experiment is live, visitors are randomly assigned to either the contro
 During this phase, we monitor and collect data on the number of visitors and email sign-ups for both groups.
 After gathering sufficient data, I calculated the sign-up rates for both the control and treatment groups:
 
-![](Image/AB_Test_signup_rate.PNG)
+![](Image/AB_Test_new.PNG)
 - **Control Sign-Up Rate (Red Button):** 9.56%
 - **Treatment Sign-Up Rate (Green Button):** 10.78%
 To gain further insights, I calculated the daily sign-up rates for each group:
